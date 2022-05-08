@@ -1,0 +1,17 @@
+<?php if (Mage::helper('sitelinkssearchbox')->isEnabled()):
+    $url = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+    $searchActionUrl = $this->getSearchActionUrl();
+?>
+
+<script type="application/ld+json">
+{
+"@context": "http://schema.org", "@type": "WebSite", "url": "<?php echo $url; ?>",
+"potentialAction": {
+"@type": "SearchAction",
+"target": "<?php echo $searchActionUrl; ?>",
+"query-input": "required name=search_term_string"
+}
+}
+</script>
+
+<?php endif; ?>

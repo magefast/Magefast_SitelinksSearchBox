@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cms_index_index>
+        <reference name="head">
+            <block type="sitelinkssearchbox/sitelinkssearchbox"
+                   name="sitelinkssearchbox"
+                   as="sitelinkssearchbox"
+                   template="sitelinkssearchbox/sitelinkssearchbox.phtml"/>
+        </reference>
+    </cms_index_index>
+    <cms_index_defaultindex>
+        <reference name="head">
+            <block type="sitelinkssearchbox/sitelinkssearchbox"
+                   name="sitelinkssearchbox"
+                   as="sitelinkssearchbox"
+                   template="sitelinkssearchbox/sitelinkssearchbox.phtml"/>
+        </reference>
+    </cms_index_defaultindex>
+</layout>

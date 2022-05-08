@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magefast_SitelinksSearchBox>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Magefast_SitelinksSearchBox>
+    </modules>
+</config>

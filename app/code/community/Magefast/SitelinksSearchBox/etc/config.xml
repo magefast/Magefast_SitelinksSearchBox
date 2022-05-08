@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Magefast_SitelinksSearchBox>
+            <version>1.1.0</version>
+        </Magefast_SitelinksSearchBox>
+    </modules>
+    <global>
+        <blocks>
+            <sitelinkssearchbox>
+                <class>Magefast_SitelinksSearchBox_Block</class>
+            </sitelinkssearchbox>
+        </blocks>
+        <helpers>
+            <sitelinkssearchbox>
+                <class>Magefast_SitelinksSearchBox_Helper</class>
+            </sitelinkssearchbox>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <sitelinkssearchbox module="Magefast_SitelinksSearchBox">
+                    <file>sitelinkssearchbox.xml</file>
+                </sitelinkssearchbox>
+            </updates>
+        </layout>
+        <events>
+            <controller_action_layout_generate_blocks_after>
+                <observers>
+                    <sitelinkssearchbox_controller_action_layout_generate_blocks_after>
+                        <type>singleton</type>
+                        <class>Magefast_SitelinksSearchBox_Model_Observer</class>
+                        <method>addCanonical</method>
+                    </sitelinkssearchbox_controller_action_layout_generate_blocks_after>
+                </observers>
+            </controller_action_layout_generate_blocks_after>
+        </events>
+    </frontend>
+    <default>
+        <sitelinkssearchbox>
+            <settings>
+                <enabled>1</enabled>
+            </settings>
+        </sitelinkssearchbox>
+    </default>
+</config>
